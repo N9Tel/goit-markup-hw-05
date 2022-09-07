@@ -21,7 +21,7 @@ body {
     background-color: var(--main-bg-color);
     font-family: 'Roboto';
         font-size: 14px;
-        /* line-height: calc(24/14);    */
+        line-height: calc(24/14);    
         letter-spacing: 0.03em;
 }
 
@@ -125,31 +125,23 @@ img {
     letter-spacing: 0.02em;
     
 }
- 
-.nav-link .current::after {
-    content: ""; 
-     width: 48px;
-    height: 4px; 
-    top: 0;
-    left: 0;
-     border-radius: 2px; *
-     border: transparent;
-    background-color: var(--accent-color);
-    position: relative;
-    outline: 2px solid red;
-    bottom: 0; 
-} 
 
-::after {
-    content: "";
+  
+ .current::after {
+    content: ""; 
     position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-}
+     width: 100%;
+    height: 4px; 
+    /* top: 0; */
+    left: 0;
+     border-radius: 2px; 
+     border: transparent;
+    background-color: var(--accent-color);    
+    bottom: 0; 
+     display: block; 
+}  
+
+
 
 
 .nav-item {
@@ -181,7 +173,7 @@ img {
 
 
 
-}
+
 .nav .link:hover,
 .nav .link:focus {
     color: var(--accent-color);
@@ -278,7 +270,7 @@ img {
     color: var(--txt-color);
 }
 
-.button{
+.button {
     background-color: var(--accent-color);
     color: var(--txt-color);
     font-family: inherit;
@@ -371,7 +363,7 @@ img {
 
     padding-top: 0;
     padding-bottom: 94px;
-    /* position: relative; */
+     /* position: relative;  */
 
 
 }
@@ -385,16 +377,16 @@ img {
 
 .work-item {
     position: relative;
-}
+} 
  
   .card-thumb {  
     
     position: absolute;
     width: 370px;
     height: 70px;
-    background-color: red;
+    background-color: rgba(47, 48, 58, 0.8);
     display: inline-block;
-    top: 0;
+    bottom: 0;
     left: 0;
     
     
@@ -808,7 +800,7 @@ color: var(--txt-color);
    
 }
 
-.backdrop .is-hidden {
+.backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -821,11 +813,11 @@ color: var(--txt-color);
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    opasity: 1;
+    opaсity: 1;
     visibility: visible;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} 
 
 
 
