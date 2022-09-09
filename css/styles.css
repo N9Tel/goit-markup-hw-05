@@ -138,7 +138,7 @@ img {
      border-radius: 2px; 
      border: transparent;
     background-color: var(--accent-color);    
-    bottom: 0; 
+    bottom: -3%; 
       display: block;  
 }  
 
@@ -147,8 +147,8 @@ img {
 
 .nav-item {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+     padding-top: 32px;
+    padding-bottom: 32px; 
     position: relative;
     
 }
@@ -166,8 +166,12 @@ img {
 .nav, .link {
     color: var(--header-color);
     font-weight: 500;
+    line-height: 1.14;
     display: block;
     align-items: baseline;
+    /* padding-top: 32px;
+    padding-bottom: 32px; */
+
 
 }
 
@@ -739,6 +743,7 @@ address {
      background-color: var(--main-bg-color); 
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 
 
 
