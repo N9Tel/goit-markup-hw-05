@@ -695,6 +695,10 @@ address {
     transition: backgrond-color var(--animation);
     transition: color var(--animation)
 }
+
+
+
+/* Модальне вікно */
  
 .backdrop.is-hidden {
     visibility: hidden;
