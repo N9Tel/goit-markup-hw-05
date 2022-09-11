@@ -113,8 +113,7 @@ img {
     gap: 50px;
      padding: 0; 
     align-items: center;
-    /* padding-top: 32px;
-        padding-bottom: 32px; */
+    
     
 
 }
@@ -163,9 +162,10 @@ img {
     line-height: 1.14;
     display: block;
     align-items: baseline;
-    transition: color var(--animation);
-/* padding-top: 32px;
-    padding-bottom: 32px; */
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+
 
 }
 
@@ -179,6 +179,9 @@ img {
     align-items: center;    
     gap: 50px;
     
+    transition-property: color;
+        transition-duration: 400ms;
+        transition-timing-function: linear;
     
 }
 
@@ -189,6 +192,7 @@ img {
  .link-tel:hover,
  .link-tel:focus {
     color: var(--accent-color); 
+
 } 
 
 .link-mail {
@@ -199,6 +203,9 @@ img {
     letter-spacing: 0.02em;
     padding: 32px 0;
     
+    transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: linear;
 }
 
 
@@ -211,18 +218,22 @@ img {
         text-decoration: none;
         padding: 32px 0;
         display: flex;
+
+        transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function: linear;
 }
 
 .link-mail,
 .link-tel {
     display:block
-    transition: color var(--accent-color);
-    transition: currentColor;
+    /* transition: color var(--accent-color);
+    transition: currentColor; */
 }
 
 .link-mail:hover,
 .link-tel:hover {
-transition: transform var(--animation);
+/* transition: transform var(--animation); */
 }
 
 .mail-icon {
@@ -482,7 +493,9 @@ transition: transform var(--animation);
      height: 44px; 
     border-radius: 50%;   
      gap: 10px; 
-     transition: background-color var(--animation);
+     transition-property: background-color, fill;
+     transition-duration: 250ms;
+     transition-timing-function: linear;
     
 
 }
@@ -491,6 +504,10 @@ transition: transform var(--animation);
 .social-link:focus {
     fill: var(--txt-color);
     background-color: var(--accent-color);
+
+    transition-property: background-color, fill;
+        transition-duration: 400ms;
+        transition-timing-function: linear;
 }
 
 .social-link:hover {
@@ -570,9 +587,9 @@ text-align: center;
     width: 170px;
     height: 92px;
     border: 1px solid #afb1b8;
-    transition: border var(--animation);
-    transition: fill var(--animation)
-    border-radius: 4px;
+    transition-property: border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
 }
 
  .client-link:hover,
@@ -582,7 +599,9 @@ text-align: center;
 } 
 
 .client-link:hover {
-    transition: color var(--animation);
+    transition-property: border, fill;
+        transition-duration: 400ms;
+        transition-timing-function: linear;
 }
 
 
@@ -621,6 +640,10 @@ text-align: center;
         color: var(--txt-color);
         text-decoration: none;
         margin-top: 20px;
+
+        transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function: linear;
 }
 
 address {
@@ -684,7 +707,9 @@ address {
  display: flex;
     fill: var(--txt-color);
 
-    transition: backgrond-color var(--animation);
+    transition-property: background-color;
+    transition-duration: 400ms;
+    transition-timing-function: linear;
      
 }
 
@@ -692,6 +717,11 @@ address {
 .social-link-f:hover,
 .social-link-f:focus {
     background-color: var(--accent-color);
+
+    transition-property: background-color;
+        transition-duration: 400ms;
+        transition-timing-function: linear;
+
 }
 
 
@@ -851,9 +881,8 @@ border: 1px solid transparent;
  transition-timing-function: linear;
 
 
-
 }
-
+/* 
 @keyframes: c-button {
     0% {
         background-color: var(--add-bg-color);
@@ -868,7 +897,7 @@ border: 1px solid transparent;
                 0px 4px 4px rgba(0, 0, 0, 0.06),
                 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
-}
+} */
 
 .c-button:hover,
 .c-button:focus {
@@ -878,6 +907,10 @@ border: 1px solid transparent;
     rgba(0, 0, 0, 0.06),
     1px 4px 6px
     rgba(0, 0, 0, 0.16);
+
+    transition-property: background-color, color, box-shadow;
+        transition-duration: 400ms;
+        transition-timing-function: linear;
 }
 
 
