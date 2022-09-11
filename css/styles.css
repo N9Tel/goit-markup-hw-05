@@ -12,7 +12,7 @@
 --add-bg-color: #F5F4FA;
 
 /* Інше */
---animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+--animation: 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 --
 }
 
@@ -138,7 +138,7 @@ img {
     left: 0;
      border-radius: 2px; 
      border: transparent;
-    background-color: var(--accent-color);    
+     background-color: var(--accent-color);    
     bottom: -3%; 
       display: block;  
 }  
@@ -162,9 +162,8 @@ img {
     line-height: 1.14;
     display: block;
     align-items: baseline;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    
 
 
 }
@@ -179,9 +178,9 @@ img {
     align-items: center;    
     gap: 50px;
     
-    transition-property: color;
-        transition-duration: 400ms;
-        transition-timing-function: linear;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+        
+        
     
 }
 
@@ -202,10 +201,9 @@ img {
     line-height: calc(16/14);
     letter-spacing: 0.02em;
     padding: 32px 0;
+    display: flex;
     
-    transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: linear;
+    
 }
 
 
@@ -219,22 +217,12 @@ img {
         padding: 32px 0;
         display: flex;
 
-        transition-property: color;
-            transition-duration: 250ms;
-            transition-timing-function: linear;
+        
 }
 
-.link-mail,
-.link-tel {
-    display:block
-    /* transition: color var(--accent-color);
-    transition: currentColor; */
-}
 
-.link-mail:hover,
-.link-tel:hover {
-/* transition: transform var(--animation); */
-}
+
+
 
 .mail-icon {
     fill: currentColor;
@@ -493,9 +481,9 @@ img {
      height: 44px; 
     border-radius: 50%;   
      gap: 10px; 
-     transition-property: background-color, fill;
-     transition-duration: 250ms;
-     transition-timing-function: linear;
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+     /* fill 25o ms cubic-bezier(0.4, 0, 0.2, 1) 250ms; */
+     
     
 
 }
@@ -505,15 +493,10 @@ img {
     fill: var(--txt-color);
     background-color: var(--accent-color);
 
-    transition-property: background-color, fill;
-        transition-duration: 400ms;
-        transition-timing-function: linear;
+    
 }
 
-.social-link:hover {
-    transition: background-color var(--animation);
-    transition: color var(--animation);
-}
+
 
 .team {
         font-weight: 500;
@@ -587,9 +570,9 @@ text-align: center;
     width: 170px;
     height: 92px;
     border: 1px solid #afb1b8;
-    transition-property: border, fill;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
  .client-link:hover,
@@ -598,11 +581,7 @@ text-align: center;
     border: 1px solid var(--accent-color);;
 } 
 
-.client-link:hover {
-    transition-property: border, fill;
-        transition-duration: 400ms;
-        transition-timing-function: linear;
-}
+
 
 
 
@@ -617,8 +596,7 @@ text-align: center;
 .flex-container-f {
     display: flex;
     align-items: baseline;
-    
-    
+        
     
 }
 
@@ -641,9 +619,8 @@ text-align: center;
         text-decoration: none;
         margin-top: 20px;
 
-        transition-property: color;
-            transition-duration: 250ms;
-            transition-timing-function: linear;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+           
 }
 
 address {
@@ -666,9 +643,7 @@ address {
     text-decoration: none;
 }
 
-.link-footer:hover {
-    transition: color var(--animation);
-}
+
 
 .link-footer {
     display: block;
@@ -707,9 +682,7 @@ address {
  display: flex;
     fill: var(--txt-color);
 
-    transition-property: background-color;
-    transition-duration: 400ms;
-    transition-timing-function: linear;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;    
      
 }
 
@@ -718,9 +691,6 @@ address {
 .social-link-f:focus {
     background-color: var(--accent-color);
 
-    transition-property: background-color;
-        transition-duration: 400ms;
-        transition-timing-function: linear;
 
 }
 
@@ -824,9 +794,11 @@ address {
 
 .flex-element {
     width: 370px; 
-    
 
-    
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+       
 
 }
 
@@ -843,13 +815,12 @@ address {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
-        /* transform: translateY(0);
-        transition: transform var(--animation); */
+        
 }
 
 .flex-element:hover .overlay-desc {
     transform: translateY(0);
-transition: transform var(--animation);
+  transition: transform var(--animation);  
 
 }
 
@@ -878,7 +849,7 @@ text-align: center;
 border: 1px solid transparent;
  transition-property: background-color, color, box-shadow;
  transition-duration: 250ms;
- transition-timing-function: linear;
+ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
