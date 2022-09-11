@@ -113,6 +113,8 @@ img {
     gap: 50px;
      padding: 0; 
     align-items: center;
+    /* padding-top: 32px;
+        padding-bottom: 32px; */
     
 
 }
@@ -149,7 +151,8 @@ img {
     position: relative;
     display: block;
     
-    
+    padding-top: 32px;
+        padding-bottom: 32px;
 }
 
 
@@ -161,8 +164,8 @@ img {
     display: block;
     align-items: baseline;
     transition: color var(--animation);
-padding-top: 32px;
-    padding-bottom: 32px;
+/* padding-top: 32px;
+    padding-bottom: 32px; */
 
 }
 
@@ -843,7 +846,10 @@ border-radius: 4px;
 padding: 6px 22px;
 text-align: center;
 border: 1px solid transparent;
- transition: background-color box-shadow var(--animation); 
+ transition-property: background-color, color, box-shadow;
+ transition-duration: 250ms;
+ transition-timing-function: linear;
+
 
 
 }
