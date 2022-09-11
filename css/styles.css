@@ -111,7 +111,7 @@ img {
 .nav-list {
     display: flex;
     gap: 50px;
-    padding: 0;
+     padding: 0; 
     align-items: center;
     
 
@@ -146,14 +146,30 @@ img {
 
 
 .nav-item {
-    display: block;
-     padding-top: 32px;
-    padding-bottom: 32px; 
     position: relative;
+    display: block;
+    
     
 }
 
 
+.nav,
+.link {
+    color: var(--header-color);
+    font-weight: 500;
+    line-height: 1.14;
+    display: block;
+    align-items: baseline;
+    transition: color var(--animation);
+padding-top: 32px;
+    padding-bottom: 32px;
+
+}
+
+.nav .link:hover,
+.nav .link:focus {
+    color: var(--accent-color);
+}
 
 .list-contacts {
     display: flex;    
@@ -163,27 +179,6 @@ img {
     
 }
 
-.nav, .link {
-    color: var(--header-color);
-    font-weight: 500;
-    line-height: 1.14;
-    display: block;
-    align-items: baseline;
-    transition: color var(--animation);
-
-
-}
-
-
-
-
-
-.nav .link:hover,
-.nav .link:focus {
-    color: var(--accent-color);    
-}
-
-
 
 
   .link-mail:hover,
@@ -192,6 +187,7 @@ img {
  .link-tel:focus {
     color: var(--accent-color); 
 } 
+
 .link-mail {
     color: var(--main-txt-color);
     text-decoration: none;
@@ -203,9 +199,6 @@ img {
 }
 
 
- .link-tel:hover {
-  
-} 
 
 .link-tel {
     color: var(--main-txt-color);
@@ -850,9 +843,25 @@ border-radius: 4px;
 padding: 6px 22px;
 text-align: center;
 border: 1px solid transparent;
-transition: background-color box-shadow var(--animation);
+ transition: background-color box-shadow var(--animation); 
 
 
+}
+
+@keyframes: c-button {
+    0% {
+        background-color: var(--add-bg-color);
+        color: var(--header-color);
+        box-shadow: none;
+    }
+
+    100% {
+        background-color: var(--accent-color);
+        color: var(--txt-color);
+        box-shadow: box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .c-button:hover,
@@ -897,6 +906,8 @@ color: var(--txt-color);
     height: 100%;
     padding: 63px 24px;
     transform: translateY(101%);
+
+    
 
 }
 
