@@ -150,8 +150,7 @@ img {
     position: relative;
     display: block;
     
-    padding-top: 32px;
-        padding-bottom: 32px;
+   
 }
 
 
@@ -162,6 +161,9 @@ img {
     line-height: 1.14;
     display: block;
     align-items: baseline;
+    padding-top: 32px;
+        padding-bottom: 32px;
+        
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
     
 
@@ -789,6 +791,43 @@ address {
     margin-right: 0px;
 }
 
+.c-button {
+
+    background-color: var(--add-bg-color);
+    color: var(--header-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26/16);
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 6px 22px;
+    text-align: center;
+    border: 1px solid transparent;
+
+    
+
+}
+
+
+.c-button:hover,
+.c-button:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+
+     transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.c-button:hover,
+.c-button:focus {
+    background-color: var(--accent-color);
+    color: var(--txt-color);
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -800,9 +839,7 @@ address {
 .flex-element {
     width: 370px; 
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+   
        
 
 }
@@ -815,15 +852,11 @@ address {
     margin-bottom: 0;
 }
 
-.flex-element:hover {
-    
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-            0px 4px 4px rgba(0, 0, 0, 0.06),
-            1px 4px 6px rgba(0, 0, 0, 0.16);
+       
         
-}
 
-.flex-element:hover .overlay-desc {
+
+.flex-link:hover .overlay-desc {
     transform: translateY(0);
   transition: transform var(--animation);  
 
@@ -838,58 +871,6 @@ address {
 
 
 
-.c-button {
-    
- background-color : var(--add-bg-color); 
-color: var(--header-color);
-font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: calc(26/16);
-    letter-spacing: 0.03em;
-cursor: pointer;
-border-radius: 4px;
-padding: 6px 22px;
-text-align: center;
-border: 1px solid transparent;
- transition-property: background-color, color, box-shadow;
- transition-duration: 250ms;
- transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
-}
-/* 
-@keyframes: c-button {
-    0% {
-        background-color: var(--add-bg-color);
-        color: var(--header-color);
-        box-shadow: none;
-    }
-
-    100% {
-        background-color: var(--accent-color);
-        color: var(--txt-color);
-        box-shadow: box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-                0px 4px 4px rgba(0, 0, 0, 0.06),
-                1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
-} */
-
-.c-button:hover,
-.c-button:focus {
-    box-shadow: 0px 1px 1px
-    rgba(0, 0, 0, 0.12),
-    0px 4px 4px
-    rgba(0, 0, 0, 0.06),
-    1px 4px 6px
-    rgba(0, 0, 0, 0.16);
-
-    transition-property: background-color, color, box-shadow;
-        transition-duration: 400ms;
-        transition-timing-function: linear;
-}
-
-
 
 .description {
    
@@ -900,10 +881,17 @@ padding: 20px 24px;
 }
 
 
-.c-button:hover,
-.c-button:focus {
-background-color: var(--accent-color);
-color: var(--txt-color);
+
+.flex-link {
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
+.flex-link:hover {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-thumb {
